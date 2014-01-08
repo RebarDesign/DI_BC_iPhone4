@@ -167,7 +167,7 @@ function init() {
 				if (!isNaN(id)){
 				//var output = "Blind: " + id;
 				//document.getElementById("output-id").innerHTML = output;
-				$("#output-id ul").append('<li id="blind' + id + '"><p>Blind ' + id + '</p></li>');
+				$("#output-id ul").append('<li id="blind' + id + '"><p>Glas ' + id + '</p></li>');
 				}
 				
 				else {
