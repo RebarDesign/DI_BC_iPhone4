@@ -1,0 +1,381 @@
+/*Overall Size */
+
+body{
+                          background-image:url(../img/bo_play_pattern.png);
+						  margin:0px;
+						  height:290px;
+						  width:475px;
+}
+
+/* Map Size */
+
+#map {
+                          width:475px;
+                          height:290px;
+                          border:2px solid rgba(255, 255, 255, 0.5);
+						  -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+							-moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+							box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+                          position:absolute;
+						  margin:0px;
+						  z-index: 1;
+}
+          
+/* Selected Blinds */          
+#output-id {
+						  position:absolute;
+						  margin-left: 10px;
+						  margin-top: -15px;
+						  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+						  background: rgba(169,3,41,1);
+							background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+							background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+							background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+							background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+							background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+							background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+						  color:white;z-index:5;
+						  width: 90%;
+						  height: 32px;
+						  overflow: scroll;
+						  border-radius: 10px 10px 10px 10px;
+							-moz-border-radius: 10px 10px 10px 10px;
+							-webkit-border-radius: 10px 10px 10px 10px;
+							border: 2px solid #6e0000;
+					}
+						
+	#output-id a img{
+						position: absolute;
+						margin-left: 45px;
+						margin-top: -35px;
+	}
+						
+	#output-id a img:active{
+						position: absolute;
+						margin-left: 63px;
+						margin-top: -40px;
+	}
+								#output-id::-webkit-scrollbar{
+								width:0px;
+								height: 0px;
+								background-color: rgba(169,3,41,1);
+								border-radius: 10px 10px 10px 10px;
+	} 					 
+							 
+	#output-id #blindSelectedList{
+							  height: 100px;
+							  list-style-type: none;
+							  color:#FFFBFB;
+							  font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+							  font-weight:400;
+							  font-size:0.7em;
+							  margin-left: -40px;
+							  margin-top: 0px;
+	}
+							  
+	#output-id #blindSelectedList li{	
+							  border-bottom: 1px solid rgba(190,0,0,0.8);
+							  
+	}
+							  
+	#output-id h4{
+								  
+							  font-weight:500;
+							  font-size:12px;
+							  margin-top: 5px;
+							  margin-left: -20px;
+							  text-shadow: 1px 1px 5px #330000;
+							  border-bottom: 1px solid rgba(190,0,0,0.8);
+	}					  
+							  
+						
+/* Side Menu */ 
+#sideMenu {	
+						/*display:none;*/
+						position:relative;
+						background-color:rgba(0,0,0,0.8);
+						width: 150px;
+						height:290px;
+						margin-left: 325px;
+						border-radius: 10px 0px 0px 10px;
+						-moz-border-radius: 10px 0px 0px 10px;
+						-webkit-border-radius: 10px 0px 0px 10px;
+						border: 5px solid #1c1c1c;
+							box-shadow: -3px -3px 3px #000;
+						-webkit-box-shadow: inset 2px 0px 13px 0px rgba(0,0,0,0.75);
+						-moz-box-shadow: inset 2px 0px 13px 0px rgba(0,0,0,0.75);
+						box-shadow: inset 2px 0px 13px 0px rgba(0,0,0,0.75);
+						text-align:center;
+						z-index: 6;
+						
+}
+					
+					#sideMenu ul {
+						
+						list-style:none;
+						margin-top: 80px;
+						}
+						
+					#sideMenu ul li a{text-decoration:none;}
+					#sideMenu ul li a:hover{text-decoration:underline;}
+					
+					
+							
+						/* Blind Up Button */ 
+						
+						#sideMenu ul#blindControl li#upButton{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/upButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#blindControl li#upButton:active{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/upButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							 
+						/* Blind Stop Button*/ 
+							 
+						#sideMenu ul#blindControl li#stopButton{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/stopButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#blindControl li#stopButton:active{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/stopButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						/* Blind Down Button */ 
+						
+						#sideMenu ul#blindControl li#downButton{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/downButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#blindControl li#downButton:active{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/downButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+					  /* Room Angle Control Buttons */
+					  
+					  #sideMenu ul#roomBlindControl{
+							position: absolute;
+							margin-top: -215px;
+							margin-left:60px;
+							opacity:0.6;
+							
+							}
+					  
+					  /* Blinds Locked */ 
+						
+						#sideMenu ul#roomBlindControl li#lukketButton{
+							margin-top: 30px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/lukketButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#roomBlindControl li#lukketButton:active{
+							margin-top: 30px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/lukketButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							 
+						/* Blinds Horizontal */ 
+							 
+						#sideMenu ul#roomBlindControl li#horizButton{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/horizButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#roomBlindControl li#horizButton:active{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/horizButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						/* Blinds Energy */ 
+						
+						#sideMenu ul#roomBlindControl li#energyButton{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/energyButton.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+						#sideMenu ul#roomBlindControl li#energyButton:active{
+							margin-top: 10px;
+							width:50px;
+							height:50px;
+							margin-left: -10px;
+							background-image:url(../img/energyButtonClicked.png);
+							background-size:50px;
+							background-repeat:no-repeat;
+							
+							}
+							
+					 /*********************************************/
+							
+							
+						#sideMenu select#floorChoice{
+							position:absolute;							
+							z-index: 2;
+							margin-top: -220px;
+							margin-left: 30px;
+							
+							}
+							
+						/*#sideMenu select#floorChoice option{
+							font-family: helvetica;
+							line-height: 40px;
+							width:40px;
+							height:40px;
+							margin: 20px 0px;
+							background: rgba(76,76,76,0.6);
+							background: -moz-linear-gradient(top, rgba(76,76,76,0.6) 0%, rgba(89,89,89,0.6) 12%, rgba(102,102,102,0.6) 25%, rgba(71,71,71,0.6) 39%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.6) 50%, rgba(0,0,0,0.6) 51%, rgba(17,17,17,0.6) 60%, rgba(43,43,43,0.6) 76%, rgba(28,28,28,0.6) 91%, rgba(19,19,19,0.6) 100%);
+							background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0.6)), color-stop(12%, rgba(89,89,89,0.6)), color-stop(25%, rgba(102,102,102,0.6)), color-stop(39%, rgba(71,71,71,0.6)), color-stop(50%, rgba(44,44,44,0.6)), color-stop(50%, rgba(44,44,44,0.6)), color-stop(51%, rgba(0,0,0,0.6)), color-stop(60%, rgba(17,17,17,0.6)), color-stop(76%, rgba(43,43,43,0.6)), color-stop(91%, rgba(28,28,28,0.6)), color-stop(100%, rgba(19,19,19,0.6)));
+							background: -webkit-linear-gradient(top, rgba(76,76,76,0.6) 0%, rgba(89,89,89,0.6) 12%, rgba(102,102,102,0.6) 25%, rgba(71,71,71,0.6) 39%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.6) 50%, rgba(0,0,0,0.6) 51%, rgba(17,17,17,0.6) 60%, rgba(43,43,43,0.6) 76%, rgba(28,28,28,0.6) 91%, rgba(19,19,19,0.6) 100%);
+							background: -o-linear-gradient(top, rgba(76,76,76,0.6) 0%, rgba(89,89,89,0.6) 12%, rgba(102,102,102,0.6) 25%, rgba(71,71,71,0.6) 39%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.6) 50%, rgba(0,0,0,0.6) 51%, rgba(17,17,17,0.6) 60%, rgba(43,43,43,0.6) 76%, rgba(28,28,28,0.6) 91%, rgba(19,19,19,0.6) 100%);
+							background: -ms-linear-gradient(top, rgba(76,76,76,0.6) 0%, rgba(89,89,89,0.6) 12%, rgba(102,102,102,0.6) 25%, rgba(71,71,71,0.6) 39%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.6) 50%, rgba(0,0,0,0.6) 51%, rgba(17,17,17,0.6) 60%, rgba(43,43,43,0.6) 76%, rgba(28,28,28,0.6) 91%, rgba(19,19,19,0.6) 100%);
+							background: linear-gradient(to bottom, rgba(76,76,76,0.6) 0%, rgba(89,89,89,0.6) 12%, rgba(102,102,102,0.6) 25%, rgba(71,71,71,0.6) 39%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.6) 50%, rgba(0,0,0,0.6) 51%, rgba(17,17,17,0.6) 60%, rgba(43,43,43,0.6) 76%, rgba(28,28,28,0.6) 91%, rgba(19,19,19,0.6) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+							border-radius: 0px 10px 10px 0px;
+							-moz-border-radius: 0px 10px 10px 0px;
+							-webkit-border-radius: 0px 10px 10px 0px;
+							border: 1px solid rgba(168,168,168,0.1);	
+							
+							}*/
+						
+#roomTextB1006 {
+						font-family: Helvetica;
+						font-size: smaller;
+}
+					
+					
+					
+#settingsMenu img{
+					
+					margin-top: 1em;
+					float: right;
+					margin-right: 1em;
+					opacity: 0.8;
+					}
+					
+#settingsMenuOptions {
+						
+					display:none;
+					background: rgba(120,120,120,1);
+						background: -moz-linear-gradient(top, rgba(120,120,120,1) 0%, rgba(122,122,122,1) 50%, rgba(189,189,189,1) 100%);
+						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(120,120,120,1)), color-stop(50%, rgba(122,122,122,1)), color-stop(100%, rgba(189,189,189,1)));
+						background: -webkit-linear-gradient(top, rgba(120,120,120,1) 0%, rgba(122,122,122,1) 50%, rgba(189,189,189,1) 100%);
+						background: -o-linear-gradient(top, rgba(120,120,120,1) 0%, rgba(122,122,122,1) 50%, rgba(189,189,189,1) 100%);
+						background: -ms-linear-gradient(top, rgba(120,120,120,1) 0%, rgba(122,122,122,1) 50%, rgba(189,189,189,1) 100%);
+						background: linear-gradient(to bottom, rgba(120,120,120,1) 0%, rgba(122,122,122,1) 50%, rgba(189,189,189,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787878', endColorstr='#bdbdbd', GradientType=0 );
+					border-radius: 10px;
+					width: 90%;
+					margin-left: 18px;
+					margin-top: 40px;
+					position: absolute;
+					z-index: 7;
+					}
+					
+#settingsMenuOptions ul{
+						
+					margin-left: 0px;
+					margin-top: 0px;
+					padding:0px;
+					}
+					
+#settingsMenuOptionsList li {	
+					border-bottom: 1px solid #c3c3c3;
+					margin: 20px 0px;
+					padding-bottom: 10px;
+					font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+					}
+					
+.floorIcon {
+					color: rgba(87,87,87,1.00);
+					position: absolute;
+					margin-top: -260px;
+					margin-left: 20px;	
+					background-image: url(../img/floorsIcon.png);
+					background-repeat: no-repeat;
+					background-size: 15px;
+					background-position-x: 40px;
+					background-position-y: 13px;
+					width: 80px;
+}
+						
+.floorIcon p{
+					margin-left: -45px;
+					font-family: helvetica;
+					font-size: 0.8em;
+}
+					
+					
+					
+						
+					
