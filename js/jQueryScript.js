@@ -25,8 +25,16 @@ function aboutAppFunction(){
 
 
 $(document).ready(function(){
-	
 		
+		
+		var floorPostion = 'expanded';
+		$('#sideMenu ul#floorChoice').click(function(){
+			
+			$('#sideMenu ul#floorChoice li').toggle("slow");
+			
+		})
+		
+
 	
 		$('#settingsMenu img').click(function() {
 		   $('#settingsMenuOptions').toggle("slow");

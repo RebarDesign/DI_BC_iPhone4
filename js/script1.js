@@ -111,8 +111,22 @@ function init() {
 						strokeOpacity: 0.6,
 						strokeDashstyle: 'dash',
 						title: 'blindIcon_select'
-					})
-					})
+					}) 
+					}
+					
+					/* , 
+					
+					{context: {
+						getLabel: function(feature) {
+							if(feature.vectorLayer.map.getZoom() > 4) {
+								return feature.attributes.label;
+							}
+						}
+					}}  */
+					
+					) 
+					
+					
 				});
 				
 				// Room Label Style
@@ -505,6 +519,32 @@ function init() {
 			
 			////Add layers on map===================/////
 			map.addLayers([Sal1, vectorLayer, textLabels]);
+			
+			///// Do not displaya blinds if zoom level is smaller than 2
+			
+			map.events.register("zoomend", map, zoomChanged);
+			
+			function zoomChanged()
+				{
+				  zoom = map.getZoom();
+				  if (zoom > 0)
+				  {
+					vectorLayer.setVisibility (true);
+				  }
+				  else if (zoom == 0)
+				  {
+					vectorLayer.setVisibility (false);
+				  }
+				}
+			
+			/// Do not dispaly blinds when layer is loaded 
+			
+			map.events.register("addlayer", map, blindDisplayChanged);
+			
+			function blindDisplayChanged()
+				{
+					vectorLayer.setVisibility (false);
+				 }
 			
 			
 			////Select feature on vector layers============/////

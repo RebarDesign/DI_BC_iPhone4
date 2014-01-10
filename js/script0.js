@@ -507,6 +507,32 @@ function init() {
 			//map.addLayers([Sal0, vectorLayer, textLabels]);
 			map.addLayers([Sal0]);
 			
+			///// Do not displaya blinds if zoom level is smaller than 2
+			
+			map.events.register("zoomend", map, zoomChanged);
+			
+			function zoomChanged()
+				{
+				  zoom = map.getZoom();
+				  if (zoom > 0)
+				  {
+					vectorLayer.setVisibility (true);
+				  }
+				  else if (zoom == 0)
+				  {
+					vectorLayer.setVisibility (false);
+				  }
+				}
+			
+			/// Do not dispaly blinds when layer is loaded 
+			
+			map.events.register("addlayer", map, blindDisplayChanged);
+			
+			function blindDisplayChanged()
+				{
+					vectorLayer.setVisibility (false);
+				 }
+			
 			
 			////Select feature on vector layers============/////
 			var selectStuff = new OpenLayers.Control.SelectFeature([vectorLayer , textLabels], {
