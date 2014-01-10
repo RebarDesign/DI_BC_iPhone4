@@ -37,7 +37,8 @@ body{
 							background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
 							background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
 							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-						  color:white;z-index:5;
+						  color:white;
+						  z-index:6;
 						  width: 90%;
 						  height: 32px;
 						  overflow: scroll;
@@ -48,9 +49,9 @@ body{
 					}
 						
 	#output-id a img{
-						position: absolute;
-						margin-left: 45px;
+						float: right;
 						margin-top: -35px;
+						margin-right: 0.5em
 	}
 						
 	#output-id a img:active{
