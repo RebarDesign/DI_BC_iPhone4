@@ -6,10 +6,10 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>Blind Control</name>
+    <name>Persienner</name>
 
     <description>
-        Simple Blind Control App
+        Persienner Kontrol App
     </description>
 
     <author href="http://rebar-design.dk" email="support@rebar-design.dk">
