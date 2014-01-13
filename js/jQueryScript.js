@@ -12,7 +12,11 @@ function networkFunction(){
 			serverPort = port;
 			
 		}
-
+		
+function helpShow(){
+			$('#helpImage').toggle();
+			$('#settingsMenuOptions').hide();
+}
 function aboutAppFunction(){
 			
 		/*	$.get('https://github.com/RebarDesign/DI_Test_ServerAppV1/blob/master/README.md', function(contents) {
@@ -25,6 +29,11 @@ function aboutAppFunction(){
 
 
 $(document).ready(function(){
+	
+		$('#helpImage').click(function(){
+				$(this).hide();
+				
+		});  
 		
 		
 		var floorPostion = 'expanded';

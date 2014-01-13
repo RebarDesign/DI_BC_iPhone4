@@ -236,7 +236,7 @@ function init() {
 			
 			// Deselect All // 
 			
-			$('#deselectBlinds').click(function(){				
+			$('#output-id').dblclick(function(){			
 				
 				deselectAll();
 				

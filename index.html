@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=1">
-    <title>Floorplan test</title>
+    <title>0 Sal</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-1.9.1.js"></script>
-    <!-- <script>$(document).bind("mobileinit", function(){
-      $.mobile.loadingMessage = false;
-    });</script>
-    <script src="js/jquery.mobile-1.3.2.js"></script>-->
     <script src="js/OpenLayers.js"></script>
     <script src="js/script0.js"></script>
 </head>
 <body onload="init();">
-  
-     <div id="map"></div>	    
+    
+    
+    <!-- Help Image -->
+    
+    <div id="helpImage">
+    	<img src="img/Help/HelpImg1.jpg"><img style="left:522px;" src="img/Help/HelpImg2.jpg"><img style="left:1044px;" src="img/Help/HelpImg3.jpg">
+    </div>
+    <!-- Floor Plan -->
+     <div id="map"></div>
      
+      <!-- Side Menu -->
      <div id="sideMenu"> 
      	<div id="settingsMenu">
         	<a><img src="img/setting.png"></a>
         	<div id="settingsMenuOptions">
             	<ul id="settingsMenuOptionsList">
                   <li><a onclick="networkFunction()">Netværk</a></li>
-                  <li><a>Nulstil alle</a></li>
+                  <li><a onclick="helpShow()">Hjælp</a></li>
                   <li><a>Kontakt</a></li>
                   <li><a onclick="aboutAppFunction()">Om app</a></li>
                 </ul>
        		</div>
-        </div>               
+        </div> 
+                      
      	<ul id="blindControl">
             <li id='upButton'></li>
             <li id='stopButton'></li>
@@ -41,7 +46,6 @@
         </ul>
         <div id="output-id">
             <h4>Active Persienner</h4>
-            <a id="deselectBlinds"><img width="15px" src="img/deselectButton.png"></a>
             <ul id="blindSelectedList">
             </ul>
        </div>

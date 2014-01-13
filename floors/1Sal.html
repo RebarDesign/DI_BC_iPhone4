@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=1">
-    <title>Floorplan test</title>
+    <title>Sal 1</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <script src="../js/jquery-1.9.1.js"></script>
     <script src="../js/OpenLayers.js"></script>
     <script src="../js/script1.js"></script>
 </head>
 <body onload="init();">
-  
+  	
+    <!-- Help Image -->
+    
+    <div id="helpImage">
+    	<img src="../img/Help/HelpImg1.jpg"><img style="left:522px;" src="../img/Help/HelpImg2.jpg"><img style="left:1044px;" src="../img/Help/HelpImg3.jpg">
+    </div>
+    
+    <!-- Floor Plan -->
      <div id="map"></div>	    
      
      <div id="sideMenu"> 
@@ -19,7 +26,7 @@
         	<div id="settingsMenuOptions">
             	<ul id="settingsMenuOptionsList">
                   <li><a onclick="networkFunction()">Netværk</a></li>
-                  <li><a>Nulstil alle</a></li>
+                  <li><a onclick="helpShow()">Hjælp</a></li>
                   <li><a>Kontakt</a></li>
                   <li><a onclick="aboutAppFunction()">Om app</a></li>
                 </ul>
@@ -37,7 +44,6 @@
         </ul>
         <div id="output-id">
             <h4>Active Persienner</h4>
-            <a id="deselectBlinds"><img width="15px" src="../img/deselectButton.png"></a>
             <ul id="blindSelectedList">
             </ul>
        </div>

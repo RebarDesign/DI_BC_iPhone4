@@ -48,17 +48,7 @@ body{
 							border: 2px solid #6e0000;
 					}
 						
-	#output-id a img{
-						float: right;
-						margin-top: -35px;
-						margin-right: 0.5em
-	}
-						
-	#output-id a img:active{
-						position: absolute;
-						margin-left: 63px;
-						margin-top: -40px;
-	}
+	
 								#output-id::-webkit-scrollbar{
 								width:0px;
 								height: 0px;
@@ -392,7 +382,32 @@ body{
 					font-size: 0.8em;
 }
 					
-					
-					
+#helpImage {
+	display:none;
+	position:absolute;
+	width:98%;
+	height:90%;
+	overflow:scroll;overflow-y: hidden;
+	z-index:12;
+	border: 2px solid rgba(106,106,106,0.65);
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	
+	}	
+	
+	#helpImage::-webkit-scrollbar{
+								width:0px;
+								height: 0px;
+								background-color: rgba(169,3,41,1);
+								border-radius: 10px 10px 10px 10px;
+	} 					 			
 						
 					
+#helpImage img{
+	
+	position:absolute;
+	float:left;
+	border: 8px solid rgba(22,22,22,0.85);
+	
+	}	
