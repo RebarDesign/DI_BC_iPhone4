@@ -4,9 +4,10 @@
 
 
 
-var serverIp = "2.111.21.33";
+//var serverIp = "2.111.21.33";
+var serverIp = "localhost";
 var serverPort = "8080";
-
+var menuHidden='notHidden';
 
 function networkFunction(){
 			
@@ -21,25 +22,44 @@ function networkFunction(){
 		}
 		
 function helpShow(){
-			$('#helpImage').toggle();
+	
+			$('#settingsMenuOptions').hide();
+			$("#sideMenu").animate({'margin-right':'-160px'});
+			$("#hideButton").removeClass('hideButton').addClass('hideButtonH');
+			menuHidden='hidden';
+			$('#helpImage').toggle('slow');
 			$('#settingsMenuOptions').hide();
 }
 
+
+
 function aboutAppFunction(){
-			
-		/*	$.get('https://github.com/RebarDesign/DI_Test_ServerAppV1/blob/master/README.md', function(contents) {
-				  
-			},'text');
-		*/	
-			alert("App Version 1.00 || Creator: Sebastian Florian || Rebar Design 2014");
 	
+			$('#AboutApp').toggle('slow');
+			$('#settingsMenuOptions').hide();
+			$("#sideMenu").animate({'margin-right':'-160px'});
+			$("#hideButton").removeClass('hideButton').addClass('hideButtonH');
+			menuHidden='hidden';
+			
+			}
+			
+function resetSure(){
+	
+			$('#resetButton').toggle();
+			$('#resetSure').hide();
+			
 			}
 		
 
 $(document).ready(function(){
 	
 		
-		
+		$("#closeAbout").click(function() {
+			
+			$('#AboutApp').hide('slow');
+			
+		});
+			
 		$('#helpImage').click(function(){
 				$(this).hide();
 				
@@ -49,6 +69,7 @@ $(document).ready(function(){
 		$('#sideMenu ul#floorChoice').click(function(){
 			
 			$('#sideMenu ul#floorChoice li').toggle("slow");
+			$('#closeFloors').toggle('slow');
 			
 		})
 		
@@ -56,6 +77,8 @@ $(document).ready(function(){
 	
 		$('#settingsMenu img').click(function() {
 		   $('#settingsMenuOptions').toggle("slow");
+		   $('#resetSure').show();
+		   $('#resetButton').hide();
 	
 		});
 		
@@ -76,7 +99,7 @@ $(document).ready(function(){
 		});
 		
 		
-		var menuHidden='notHidden';
+		
 
 		$("#hideButton").click(function() {
 		  if (menuHidden=='notHidden') {

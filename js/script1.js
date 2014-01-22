@@ -94,7 +94,7 @@ function init() {
 				if (!isNaN(id)){
 				//var output = "Blind: " + id;
 				//document.getElementById("output-id").innerHTML = output;
-				$("#output-id ul").append('<li id="blind' + id + '"><p>Glas ' + id + '</p></li>');
+				$("#output-id ul").append('<li id="blind' + id + '"><p>P. ' + id + '</p></li>');
 				}
 				
 				else {
@@ -467,12 +467,7 @@ function init() {
 			// ROOM B1019 //
 			/////////////////
 			
-			var B1019AllData = new Array(
-			/*R*/"B1019All",/*Name[1]:*/"KONTOR B1019",/*Nb of Bl[2]:*/ 13,/* X[3]:*/ 154 ,/*Y[4]:*/ 230 ,/*Dr[5]:*/ 9 ,/*1st Bl[6]*/ 102);
-				
-			//Width. Height//
-					createLabel ( B1019AllData[1] , B1019AllData[3] + 14, B1019AllData[4] - 60, B1019AllData[2], B1019AllData[6], 30 , 4);
-					
+			
 			// ROOM B1019a //
 			/////////////////	
 			
@@ -496,7 +491,7 @@ function init() {
 					createBlind ( 'blind108', '108' , B1019bData[3] + B1019bData[5]*2, B1019bData[4] , B1019bData[0]);
 					createBlind ( 'blind109', '109' , B1019bData[3] + B1019bData[5]*3, B1019bData[4] , B1019bData[0]);
 					createBlind ( 'blind110', '110' , B1019bData[3] + B1019bData[5]*4, B1019bData[4] , B1019bData[0]);  //Width. Height//
-					createLabel ( B1019bData[1] , B1019bData[3] + 18, B1019bData[4] - 30, B1019bData[2], B1019bData[6], 15 , 4);
+					createLabel ( B1019bData[1] , B1019bData[3] + 18, B1019bData[4] - 40, B1019bData[2], B1019bData[6], 15 , 4);
 					
 			// ROOM B1019c //
 			/////////////////	
@@ -513,13 +508,7 @@ function init() {
 			/////////////////
 			// ROOM B1032 //
 			/////////////////
-			
-			var B1032AllData = new Array(
-			/*R*/"B1032All",/*Name[1]:*/"KONTOR B1032",/*Nb of Bl[2]:*/ 18,/* X[3]:*/ 334 ,/*Y[4]:*/ 230 ,/*Dr[5]:*/ 9 ,/*1st Bl[6]*/ 115);
 				
-			//Width. Height//
-					createLabel ( B1032AllData[1] , B1032AllData[3] + 14, B1032AllData[4] - 60, B1032AllData[2], B1032AllData[6], 30 , 4);
-					
 			// ROOM B1032a //
 			/////////////////	
 			
@@ -543,7 +532,7 @@ function init() {
 					createBlind ( 'blind121', '121' , B1032bData[3] + B1032bData[5] , B1032bData[4] , B1032bData[0]);
 					createBlind ( 'blind122', '122' , B1032bData[3] + B1032bData[5]*2, B1032bData[4] , B1032bData[0]);
 					createBlind ( 'blind123', '123' , B1032bData[3] + B1032bData[5]*3, B1032bData[4] , B1032bData[0]);  //Width. Height//
-					createLabel ( B1032bData[1] , B1032bData[3] + 12, B1032bData[4] - 30, B1032bData[2], B1032bData[6], 15 , 4);
+					createLabel ( B1032bData[1] , B1032bData[3] + 12, B1032bData[4] - 40, B1032bData[2], B1032bData[6], 15 , 4);
 					
 			// ROOM B1032c //
 			/////////////////	
@@ -715,8 +704,8 @@ function init() {
 			
 			
 			//map.addControl(new OpenLayers.Control.LayerSwitcher());
-			map.zoomToMaxExtent();	
-			//map.zoomTo("1");
+			//map.zoomToMaxExtent();	
+			map.zoomTo("2");
 
 			
 }

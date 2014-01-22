@@ -16,23 +16,43 @@
     <div id="helpImage">
     	<img src="img/Help/HelpImg1.jpg"><img style="left:522px;" src="img/Help/HelpImg2.jpg"><img style="left:1044px;" src="img/Help/HelpImg3.jpg">
     </div>
+    
+    <div class="aboutApp" id="AboutApp">
+        <div id="about1">
+            <h3>Persienner</h3>
+            <img src="img/Blind.png">
+            <h5>Dansk Industriens Hus</h5>
+           <h6>Version: 1.0.0 </h6>
+           <h6>©2014 Rebar Design</h6>
+        </div>
+        <img id="closeAbout" src="img/deselectButtonG.png">
+        <div id="about2">    
+            <p>Hagen</p>
+            
+           <h4><a href="http://www.hagen.dk" target="_new">www.hagen.dk</a></h4>
+           <h4><a href="callto:+45 9620 0504">+45 9620 0504</a></h4>
+           <h4><a href="mailto:mail@hagen.dk?Subject=DI%20BlindApp" target="_top"> e-mail: mail@hagen.dk </a></h4>
+        </div>    
+        
+    </div>
+    
     <!-- Floor Plan -->
-     <div id="map"></div>
+     <div id="map"></div>	    
      
-      <!-- Side Menu -->
      <div id="sideMenu"> 
-     <div id="hideButton" class="hideButton"></div>
+     	<div id="hideButton" class="hideButton"></div>
      	<div id="settingsMenu">
         	<a><img src="img/setting.png"></a>
         	<div id="settingsMenuOptions">
             	<ul id="settingsMenuOptionsList">
                   <li><a onclick="networkFunction()">Netværk</a></li>
                   <li><a onclick="helpShow()">Hjælp</a></li>
-                  <li><a>Kontakt</a></li>
-                  <li><a onclick="aboutAppFunction()">Om app</a></li>
+                  <li id="resetSure"><a onclick="resetSure()" style="color:#CB0003;">Reset Alle</a></li> 
+                  <li id="resetButton" style="display:none"><a onclick="resetAll()" style="color:#CB0003;">OK Reset</a></li> 
+                  <li><a id="aboutAppButton" onclick="aboutAppFunction()">Om app</a></li>
                 </ul>
        		</div>
-        </div> 
+        </div>    
                       
      	<ul id="blindControl">
             <li id='upButton'></li>
@@ -55,15 +75,16 @@
        		<p>SAL</p>
         </div>
         <ul id="floorChoice" class="menu dropit">
+          <img id="closeFloors"  src="img/deselectButton1.png" width='16px'>
           <li class="featured"><a>0</a></li>
           <li><a href="floors/1Sal.html">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">-1</a></li>
+          <li><a href="floors/2Sal.html">2</a></li>
+          <li><a href="floors/3Sal.html">3</a></li>
+          <li><a href="floors/4Sal.html">4</a></li>
+          <li><a href="floors/5Sal.html">5</a></li>
+          <li><a href="floors/6Sal.html">6</a></li>
+          <li><a href="floors/7Sal.html">7</a></li>
+          <li><a href="floors/KSal.html">-1</a></li>
          </ul>
     </div>
 	<script src="js/cordova-2.0.0.js"></script>

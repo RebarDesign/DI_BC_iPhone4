@@ -540,8 +540,8 @@ function init() {
 			
 			
 			//map.addControl(new OpenLayers.Control.LayerSwitcher());
-			map.zoomToMaxExtent();	
-			//map.zoomTo("1");
+			//map.zoomToMaxExtent();	
+			map.zoomTo("2");
 
 			
 }
