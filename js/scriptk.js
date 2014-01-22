@@ -187,7 +187,7 @@ function init() {
 							
 				$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/Kjeller/" + roomId + "/"+id
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/k/" + roomId + "/"+id
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -215,7 +215,7 @@ function init() {
 							//alert( "Blind " + id +  " STOP" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/stop/Kjeller/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/stop/k/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -243,7 +243,7 @@ function init() {
 							//alert( "Blind " + id +  " going DOWN" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/down/Kjeller/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/down/k/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -255,6 +255,110 @@ function init() {
 						}
 				}
 			}
+			
+			// Angles 
+			// Horizontal. Energy. Closed. 
+
+			function sendToHoriz() {
+				
+				
+				
+				for(var f=0;f<vectorLayer.features.length;f++){
+					
+					
+						var id = vectorLayer.features[f].attributes.key;
+						var roomId = vectorLayer.features[f].attributes.room;
+						
+						if(vectorLayer.selectedFeatures.indexOf(vectorLayer.features[f])> -1 ){
+							//alert( "Blind " + id +  " going horiz" );
+							$.ajax({
+						  type: "GET",
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/horizontalB/k/" + roomId + "/"+id 
+						  })
+						   .done(function( data ) {
+							   console.log("command sent to server");
+							   })
+						   .fail( function(xhr, textStatus, errorThrown) { 
+								alert(textStatus);  
+							});
+						
+						}
+				}
+			}
+
+			function sendToClosed() {
+				
+				
+				
+				for(var f=0;f<vectorLayer.features.length;f++){
+					
+					
+						var id = vectorLayer.features[f].attributes.key;
+						var roomId = vectorLayer.features[f].attributes.room;
+						
+						if(vectorLayer.selectedFeatures.indexOf(vectorLayer.features[f])> -1 ){
+							//alert( "Blind " + id +  " going closed" );
+							$.ajax({
+						  type: "GET",
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/closedB/k/" + roomId + "/"+id 
+						  })
+						   .done(function( data ) {
+							   console.log("command sent to server");
+							   })
+						   .fail( function(xhr, textStatus, errorThrown) { 
+								alert(textStatus);  
+							});
+						
+						}
+				}
+			}
+
+			function sendToEnergy() {
+				
+				
+				
+				for(var f=0;f<vectorLayer.features.length;f++){
+					
+					
+						var id = vectorLayer.features[f].attributes.key;
+						var roomId = vectorLayer.features[f].attributes.room;
+						
+						if(vectorLayer.selectedFeatures.indexOf(vectorLayer.features[f])> -1 ){
+							//alert( "Blind " + id +  " going closed" );
+							$.ajax({
+						  type: "GET",
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/energyB/k/" + roomId + "/"+id 
+						  })
+						   .done(function( data ) {
+							   console.log("command sent to server");
+							   })
+						   .fail( function(xhr, textStatus, errorThrown) { 
+								alert(textStatus);  
+							});
+						
+						}
+				}
+			}
+
+			function sendToReset() {
+				
+							$.ajax({
+						  type: "GET",
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/ResetAll" 
+						  })
+						   .done(function( data ) {
+							   console.log("command sent to server");
+							   })
+						   .fail( function(xhr, textStatus, errorThrown) { 
+								alert(textStatus);  
+							});
+						
+						
+				
+			}
+
+
+
 			
 			$('#upButton').click(function(){				
 				
@@ -273,6 +377,31 @@ function init() {
 				sendToDown();
 				
 				});
+
+			$('#lukketButton').click(function(){				
+				
+				sendToClosed();
+				
+				});
+				
+			$('#horizButton').click(function(){				
+				
+				sendToHoriz();
+				
+				});
+				
+			$('#energyButton').click(function(){				
+				
+				sendToEnergy();
+				
+				});
+
+			$('#resetButton').click(function(){				
+				
+				sendToReset();
+				
+				});
+			
 			
 			
 			////////////////////////////
