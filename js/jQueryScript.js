@@ -5,19 +5,26 @@
 
 
 //var serverIp = "2.111.21.33";
-var serverIp = "localhost";
-var serverPort = "8080";
+/*var serverIp = "localhost";
+var serverPort = "8080";*/
+var serverIp = window.localStorage.getItem("ip");
+var serverPort = window.localStorage.getItem("port");
+
 var menuHidden='notHidden';
 
 function networkFunction(){
-			
+	
 			var ip=prompt("Please enter server IP", serverIp);
+			//serverIp = ip;
+			window.localStorage.removeItem("ip");
+			window.localStorage.setItem("ip", ip);
+			serverIp = window.localStorage.getItem("ip");
 			
-			serverIp = ip;
-			
+			//serverPort = port;
 			var port=prompt("Please enter server port", serverPort);
-			
-			serverPort = port;
+			window.localStorage.removeItem("port");
+			window.localStorage.setItem("port", port);
+			serverPort = window.localStorage.getItem("port");
 			
 		}
 		
@@ -49,9 +56,12 @@ function resetSure(){
 			$('#resetSure').hide();
 			
 			}
-		
-
+			
 $(document).ready(function(){
+	
+	
+		
+		
 	
 		
 		$("#closeAbout").click(function() {

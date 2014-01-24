@@ -185,7 +185,7 @@ function init() {
 						if(vectorLayer.selectedFeatures.indexOf(vectorLayer.features[f])> -1 ){
 							
 							//alert( "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/1/" + roomId + "/"+id );
-							
+						
 				$.ajax({
 						  type: "GET",
 						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/1/" + roomId + "/"+id
