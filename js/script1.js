@@ -582,8 +582,8 @@ function init() {
 			// ROOM B1016 //
 			/////////////////	
 			
-			var B1016Data = new Array(
-			/*R Nb[0]:*/ "B1016",/*Name[1]:*/"Femten",/*Nb of Bl[2]:*/ 4,/* X[3]:*/ -14 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 9 ,/*1st Bl[6]*/ 98);
+			var B1015Data = new Array(
+			/*R Nb[0]:*/ "B1015",/*Name[1]:*/"Femten",/*Nb of Bl[2]:*/ 4,/* X[3]:*/ -14 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 9 ,/*1st Bl[6]*/ 98);
 				
 					createBlind ( 'blind98', '98' , B1016Data[3] , B1016Data[4] , B1016Data[0]);
 					createBlind ( 'blind99', '99' , B1016Data[3] + B1016Data[5] , B1016Data[4] , B1016Data[0]);
@@ -682,10 +682,10 @@ function init() {
 			var B1032dData = new Array(
 			/*R Nb[0]:*/"B1032d",/*Name[1]:*/"B1032 D",/*Nb of Bl[2]:*/ 4,/* X[3]:*/ 400 ,/*Y[4]:*/ 220 ,/*Bl Dr[5]:*/ 9 ,/*1st Bl[6]*/ 129);
 				
-					createBlindA ( 'blind129', '129' , 440 , 210 , B1032dData[0], 15);
-					createBlindA ( 'blind130', '130' , 443 , 200 , B1032dData[4] , B1032dData[0], 15);
-					createBlindA ( 'blind131', '131' , 446 , 190, B1032dData[4] , B1032dData[0], 15);
-					createBlindA ( 'blind132', '132' , 449 , 180, B1032dData[4] , B1032dData[0], 15); //Width. Height//
+					createBlindA ( 'blind129', '129' , 440 , 210, B1032dData[0], 15);
+					createBlindA ( 'blind130', '130' , 443 , 200, B1032dData[0], 15);
+					createBlindA ( 'blind131', '131' , 446 , 190,  B1032dData[0], 15);
+					createBlindA ( 'blind132', '132' , 449 , 180,  B1032dData[0], 15); //Width. Height//
 					createLabel ( B1032dData[1] , B1032dData[3] + 16, B1032dData[4] - 38, B1032dData[2], B1032dData[6], 15 , 4);
 			
 			
