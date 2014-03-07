@@ -9,7 +9,7 @@ function init() {
 										
 			var Salk = new OpenLayers.Layer.Image(
 				'Sal k',
-				'../img/KFloorPlan.jpg',
+				'../img/kFloorPlan.jpg',
 				new OpenLayers.Bounds(-512, -238, 512, 238),
 				new OpenLayers.Size(512, 238),
 				{numZoomLevels: 7}
@@ -187,7 +187,7 @@ function init() {
 							
 				$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/k/" + roomId + "/"+id
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/up/8/" + roomId + "/"+id
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -215,7 +215,7 @@ function init() {
 							//alert( "Blind " + id +  " STOP" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/stop/k/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/stop/8/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -243,7 +243,7 @@ function init() {
 							//alert( "Blind " + id +  " going DOWN" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/down/k/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/down/8/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -273,7 +273,7 @@ function init() {
 							//alert( "Blind " + id +  " going horiz" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/horizontalB/k/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/horizontalB/8/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -300,7 +300,7 @@ function init() {
 							//alert( "Blind " + id +  " going closed" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/closedB/k/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/closedB/8/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
@@ -327,7 +327,7 @@ function init() {
 							//alert( "Blind " + id +  " going closed" );
 							$.ajax({
 						  type: "GET",
-						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/energyB/k/" + roomId + "/"+id 
+						  url: "http://" + serverIp + ":" + serverPort + "/ServerJAXRS/cmd/energyB/8/" + roomId + "/"+id 
 						  })
 						   .done(function( data ) {
 							   console.log("command sent to server");
