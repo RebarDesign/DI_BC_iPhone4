@@ -71,23 +71,15 @@ $(document).ready(function(){
 		$( ".breadcrumbs" ).show();
   });
 		
-	$( "#formInstallApp" ).submit(function() {
-			  
-	});
 	
-	function mailUDID(){
+	$("#bUDID").on("click", function(){
 		
 		var udid = $('#udidU').val();
 		var name = $('#udidN').val();
+		var appended  = 'mailto:rebardesigndk@gmail.com?cc=mail@hagen.dk&subject=Add device to app permissions - DI &body=New phone ready for pairing with UDID: ' + udid + '. Ordered by by: ' + name ;
 		
-		
-                var args = {
-                    subject: 'New Phone UDID',
-                    body: 'DI Message to pair new phone to App: ID is ' + udid +  'from' + name,
-                    toRecipients: 'rebardesigndk@gmail.com'
-                };
-            cordova.exec(null, null, "EmailComposer", "showEmailComposer", [args]);
-           }
-	
-	
+		 $('#bUDID').attr('href', appended);
+		 $('#bUDID').trigger("click");
+		 });
+		   
 })
