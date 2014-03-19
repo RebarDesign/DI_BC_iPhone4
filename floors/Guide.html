@@ -80,16 +80,17 @@
               <fieldset>
                 <legend>New Phone</legend>
                 <label>Name
-                  <input type="text" placeholder="Your name here">
+                  <input id="udidN" type="text" placeholder="Your name here">
                 </label>
                 
                 <label>Add phone UDID <a target="new" href="http://whatsmyudid.com/">(How to get your UDID?)</a>
-                <input type="text" placeholder="iPhone UDID" />
+                <input id="udidU" type="text" placeholder="iPhone UDID" />
                 </label>
                 
               </fieldset>
               
-              <input style="float:right;" class="radius button" type="submit" value="Send">
+              <button style="float:right;" onClick='mailUDID();' class="radius button">Send</button>
+              <!-- <a class="radius button" href="mailto:email@email.com?cc=email2@email.com&bcc=email3@email.com&subject=The subject of the email&body=The body of the email">Send mail with cc, bcc, subject and body</a>-->
             </form>
        
         </div>
