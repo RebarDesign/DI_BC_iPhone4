@@ -1,0 +1,15 @@
+/*Overall Size */
+
+body{
+						  margin:0px;
+}
+
+
+#faqs { position:relative;
+		font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+#faqs h3	{ cursor:pointer; }
+#faqs h3.active	{ color:#d74646; }
+#faqs div   { position:relative; }
+#faqs div p	{ padding:0; margin-bottom:15px; }
+	

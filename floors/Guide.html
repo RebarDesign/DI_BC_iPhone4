@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=1">
+    <title>Guide</title>
+    <link rel="stylesheet" type="text/css" href="../css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleG.css" />
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/foundation.min.js"></script>
+</head>
+<body style="background-color:rgba(255,255,255,1.00);">
+	 <div id="troubleshootingGuide" class="row">
+         <div class="large-6 columns">
+         	<h3>Troubleshooting Guide</h3>
+         </div>   
+     </div> 
+     
+     <ul class="breadcrumbs" style="display:none;">
+     	<li id="startView"><a href="#">Home</a></li>
+     </ul>
+     
+     <div id="initialMenu" class="row">
+     	 <div class="large-3 columns">
+                <a id="mBlindMalfunction" href="#" class="button radius expand">Blind Malfunction</a>
+         </div>
+         <div class="large-10 large-offset-2 columns"></div>
+         <div class="large-3 columns">
+                <a id="mInstallApp" class="button radius expand">Install App On New Phone</a>
+         </div>
+         <div class="large-10 large-offset-2 columns"></div>
+         <div class="large-3 columns">
+                <a id="mSystemDescription" href="#" class="button radius expand">System Description</a>            
+         </div>
+         <div class="large-10 large-offset-2 columns"></div>
+     </div>
+     
+     <div id="blindMalfunctionContent" class="row" style="display:none;">
+         <div class="large-12 columns">
+         	<p>Follow the guide according to the symptoms.</p>
+            
+            <div id="blindMalfunctionMenu" class="row">
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO1" href="#" class="button round expand">Blind Not Responding</a>
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO2" class="button round expand">Blind Abnormal Behaviour</a>
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO3" href="#" class="button round expand">Other</a>            
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+             </div>
+             
+             <div id="blindMalfunctionMenuO101" style="display:none;" class="row">
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO10101" href="#" class="button round expand">Single Blind</a>
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO10102" class="button round expand">Multiple Blinds</a>
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+                 <div class="large-3 columns">
+                        <a id="blindMalfunctionMenuO10103" href="#" class="button round expand">All Blinds</a>            
+                 </div>
+                 <div class="large-10 large-offset-2 columns"></div>
+             </div>
+         </div>
+     </div>
+
+     <div id="installAppContent" class="row" style="display:none;">
+         <div class="large-12 columns">
+             <p>To install the app on a new iPhone/iPad you need to provide the UDID ( Unique Device IDentification) This can be done by connecting the phone and accesing iTunes, and clicking on the Serial Number. User guide below.</p>
+             <a href="https://build.phonegap.com/apps/709210/install" target="new">Click Here for Android Phone / Tablet</a>
+         
+            <form id="formInstallApp">
+              <fieldset>
+                <legend>New Phone</legend>
+                <label>Name
+                  <input type="text" placeholder="Your name here">
+                </label>
+                
+                <label>Add phone UDID <a target="new" href="http://whatsmyudid.com/">(How to get your UDID?)</a>
+                <input type="text" placeholder="iPhone UDID" />
+                </label>
+                
+              </fieldset>
+              
+              <input style="float:right;" class="radius button" type="submit" value="Send">
+            </form>
+       
+        </div>
+    </div>
+    <div class="row">
+         <div class="large-6 columns">
+    		<a href="../index.html" class="small alert button">Floors</a>
+         </div>
+    </div>
+	<script src="../js/cordova-2.0.0.js"></script>
+    <script src="../js/GuideScript.js"></script>
+</body>
+</html>
