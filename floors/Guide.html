@@ -10,95 +10,420 @@
     <script src="../js/foundation.min.js"></script>
 </head>
 <body style="background-color:rgba(255,255,255,1.00);">
-	 <div id="troubleshootingGuide" class="row">
+   
+    <div id="troubleshootingGuide" class="row">
          <div class="large-6 columns">
          	<h3>Troubleshooting Guide</h3>
          </div>   
      </div> 
      
      <ul class="breadcrumbs" style="display:none;">
-     	<li id="startView"><a href="#">Home</a></li>
+     	
      </ul>
      
-     <div id="initialMenu" class="row">
-     	 <div class="large-3 columns">
-                <a id="mBlindMalfunction" href="#" class="button radius expand">Blind Malfunction</a>
-         </div>
-         <div class="large-10 large-offset-2 columns"></div>
-         <div class="large-3 columns">
-                <a id="mInstallApp" class="button radius expand">Install App On New Phone</a>
-         </div>
-         <div class="large-10 large-offset-2 columns"></div>
-         <div class="large-3 columns">
-                <a id="mSystemDescription" href="#" class="button radius expand">System Description</a>            
-         </div>
-         <div class="large-10 large-offset-2 columns"></div>
-     </div>
-     
-     <div id="blindMalfunctionContent" class="row" style="display:none;">
-         <div class="large-12 columns">
-         	<p>Follow the guide according to the symptoms.</p>
+     <div id="wrapper" class="row">
+     	<div id="Content" class="large-3 columns">
+        
+    	</div>
+        	<!-- Single Blind -->
+        	<div id="M1A1A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Symptom</th>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blind moves from App but not wall switch.</td>
+                      <td>a) KNX Connection Down </br> b) Problem with Triton Panel </br> c) Triton Panel with Simbus Communication Error</td>					  
+                      <td>Check KNX connection </br> Check KNX connection </br> Check KNX connection </td>
+                    </tr>
+                    <tr>
+                      <td>Blind moves from wall switch but not App.</td>
+                      <td>App programming error</td>
+                      <td>Check KNX connection </br> Check KNX connection </br> Check KNX connection </td>
+                    </tr>
+                    <tr>
+                      <td>Blind cannot be controlled from either the App or Wall switch</td>
+                      <td>a) MCU Failure </br> b) Motor Failure  </br> c) Cable Failure </td>
+                      <td>Check KNX connection </br> Check KNX connection </br> Check KNX connection </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Mutiple Blinds -->
+            <div id="M1A2A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Symptom</th>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blinds move from App but not wall switch.</td>
+                      <td>a) KNX System Error </br> b) Problem with Triton Panel </br> c) Triton Panel with Simbus Communication Error</td>
+                      <td>Check KNX connection </br> Check KNX connection </br> Check KNX connection </td>
+                    </tr>
+                    <tr>
+                      <td>Blinds move from Wall Switch but not App.</td>
+                      <td>a) App server down </br> b) App programming error</td>
+                      <td>a) Start App Server </br> b) Contact Hagen</td>
+                    </tr>
+                    <tr>
+                      <td>Blind cannot be controlled in any way</td>
+                      <td>a) Simbus system error </br> b) Cabinet Transformer Burn </td>
+                      <td>a) Contact Hagen </br> b) Check Transformer Fuse ( Contact Hagen ) </td>                      
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Whole Room -->
+            <div id="M1A3A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Symptom</th>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blinds move from wall panel but not from App</td>   
+                      <td>a) KNX System Error </br> b) Problem with Triton Panel </br> c) Triton Panel with Simbus Communication Error</td>
+                      <td>Check KNX connection </br> Check KNX connection </br> Check KNX connection</td>
+                    </tr>
+                    <tr>
+                      <td>Blinds move from App but not from wall panel</td>   
+                      <td>a) App server down </br> b) App programming error</td>
+                      <td>a) Restart App Server from Computer Desktop </br> b) Contact Hagen</td>
+                    </tr>
+                    <tr>
+                      <td>Room blinds cannot be controlled</td>   
+                      <td>a) Simbus system error </br> b) Cabinet Transformer Burn</td>
+                      <td>a) Contact Hagen </br> b) Check Transformer Fuse ( Contact Hagen ) </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- All Blinds -->
+            <div id="M1A4A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Symptom</th>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>No blinds moving from either App or Wall Panels</td>
+                      <td>Blind Server Down</td>
+                      <td>Check if server in computer room is on. </br> Check if Simbus, OPC, and App server is running ( should open automatically). </br> Check if blind cabinets have power </td>
+                    </tr>
+                    <tr>
+                      <td>Blinds moving from wall panel but not from app. </td>
+                      <td>App server down.</td>
+                      <td>Restart App Server ( On Desktop )</td>
+                    </tr>
+                    <tr>
+                      <td>Blinds moving from wall panel but not from app.</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Running and stopping after a few seconds -->
+          	<div id="M1B1A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>MCU Problem</td>
+                      <td>a) Reset MCU Power ( from cabient )  </br> b) Change MCU Firmware ( Contact Hagen )</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Blind stopping before top -->
+            <div id="M1B2A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Motor Problem - Unable to lift load</td>
+                      <td>Check Motor (Contact Hagen ) </td>					  
+                    </tr>
+                    <tr>
+                      <td>Blind Stopper Problem</td>
+                      <td>Check Blind Stopper ( Contact Hagen )</td>
+                    </tr>
+                    <tr>
+                      <td>MCU Problem</td>
+                      <td>a) Change MCU Parameters ( Contact Hagen ) </br> b) Replace MCU ( Contact Hagen )</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Blind motor making loud noise -->
+            <div id="M1B3A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>High Pitch noise when blind reaches top</td>
+                      <td>MCU Parameters set too high - Change MCU Parameters ( Contact Hagen )</br></td>
+                    </tr>
+                    <tr>
+                      <td>Motor failure</td>
+                      <td>Replace Motor ( Check Motor Resistance - Contact Hagen )</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Blind tilts but does not lift -->
+            <div id="M1B4A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blind Rod disconnected from motor</td>
+                      <td>Replace inner blind ( Contact Hagen )</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Blind goes up when should go down -->
+            <div id="M1B5A" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blind Programming error</td>
+                      <td>Check blind programming parameters ( 1 for down, 0 for up  - Contact Hagen )</td>		
+                    </tr>
+                    <tr>
+                      <td>Blind has no bottom break - blind does not stop when reaching bottom and lifts.</td>
+                      <td>Give up command to bring back down and in correct running state. ( Opt - replace inner blind - Cont Hagen )</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
             
-            <div id="blindMalfunctionMenu" class="row">
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO1" href="#" class="button round expand">Blind Not Responding</a>
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO2" class="button round expand">Blind Abnormal Behaviour</a>
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO3" href="#" class="button round expand">Other</a>            
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-             </div>
-             
-             <div id="blindMalfunctionMenuO101" style="display:none;" class="row">
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO10101" href="#" class="button round expand">Single Blind</a>
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO10102" class="button round expand">Multiple Blinds</a>
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-                 <div class="large-3 columns">
-                        <a id="blindMalfunctionMenuO10103" href="#" class="button round expand">All Blinds</a>            
-                 </div>
-                 <div class="large-10 large-offset-2 columns"></div>
-             </div>
-         </div>
-     </div>
-
-     <div id="installAppContent" class="row" style="display:none;">
-         <div class="large-12 columns">
-             <p>To install the app on a new iPhone/iPad you need to provide the UDID ( Unique Device IDentification) This can be done by connecting the phone and accesing iTunes, and clicking on the Serial Number. User guide below.</p>
-             <a href="https://build.phonegap.com/apps/709210/install" target="new">Click Here for Android Phone / Tablet</a>
-         
-            <form id="formInstallApp">
-              <fieldset>
-                <legend>New Phone</legend>
-                <label>Name
-                  <input id="udidN" type="text" placeholder="Your name here">
-                </label>
-                
-                <label>Add phone UDID <a target="new" href="http://whatsmyudid.com/">(How to get your UDID?)</a>
-                <input id="udidU" type="text" placeholder="iPhone UDID" />
-                </label>
-                
-              </fieldset>
+            <!-- Other -->
+            <div id="M1C1" class="large-12 columns">
+            	<table>
+                  <thead>
+                    <tr>
+                      <th>Symptom</th>
+                      <th>Problem</th>
+                      <th>Solution</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+            </div>
+            
+         	<div id="installAppContent" class="row">
+                     <div class="large-12 columns">
+                     <p>To install the app on a new iPhone/iPad you need to provide the UDID ( Unique Device IDentification) This can be done by connecting the phone and accesing iTunes, and clicking on the Serial Number. User guide below.</p>
+                     <a href="https://build.phonegap.com/apps/709210/install" target="new">Click Here for Android Phone / Tablet</a>
+                 
+                    <form id="formInstallApp">
+                      <fieldset>
+                        <legend>New Phone</legend>
+                        <label>Name
+                          <input id="udidN" type="text" placeholder="Your name here">
+                        </label>
+                        
+                        <label>Add phone UDID <a target="new" href="http://whatsmyudid.com/">(How to get your UDID?)</a>
+                        <input id="udidU" type="text" placeholder="iPhone UDID" />
+                        </label>
+                        
+                      </fieldset>
+                      
+                      <a style="float:right;" id="bUDID" class="radius button">Send</a>
+                    </form>
+               
+                </div>
+             </div>  
               
-              <a style="float:right;" id='bUDID' class="radius button">Send</a>
-            </form>
-       
-        </div>
-    </div>
+                <div id="simbusDescription" style="padding:30px;" class="row">
+                     <div class="large-12 columns">
+                     <h3>GENERAL</h3>
+                     <p>The system consists of motrized blinds, connected to MCU’s (Motor Control Units)
+                        controlled by a central computer system. </br>
+                        </br>
+                        The central computer system receivs commands from sensors and user input from wall
+                        panels, which are of two types: AMX and Triton panels. </br>
+                        </br>
+                        The communication with the MCU’s is done through a BUS cable which sends serial
+                        commands, which are then translated into electrical signals. </br>
+                        </br>
+                        The system is designed to communicate and integrate with other industry systems.
+                        </br> </br>
+                        The system is controlled by a central computer, and it has 3 main software components
+                        which need to be running at all times.
+                        </br> </br>
+                        Detailed description of the hardware and software components in the following
+                        sections.</p>
+                	</div>
+                    <div class="row">
+                    	<div class="large-12 columns">
+						<h3>HARDWARE</h3>
+                        </div>
+                    	<div class="large-4 columns large-push-2">
+                        	<img src="../img/desc/systemDesc1.JPG">
+                        </div>
+                        <div class="large-6 columns">
+                        Each sealed unit has a motor controlling a rod in the top side, encased in an aluminium profile. </br> </br> 
+                        The motors are FAULHABER stepper motors, controlled by two wires. 
+                        </br> </br>
+                        The main motor wires are plugged in an MCU (motor control unit) placed on motherboards which provide a 24V power suply and a platform for the BUS connection. 
+                        </br> </br>
+                        The motherboards are connected to each other in series and then to a MOXA RS232 to USB converter to the central computer. 
+                        </br> </br>
+                        The central computer then send and receives information through the serial port. 
+                        </br> </br>
+                        A KNX serial connection is also used to receive signals from the different systems, from user input , sensor and timer commands.
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="large-12 columns"></br></br></br></br>
+						<h3>SOFTWARE</h3>
+                        </div>
+                    	<div class="large-12 columns">
+                        	The communication of the system to the motorized blinds is done through serial communication possible through a MOXA RS 232 to USB converter which connects to the data ports of the MCU’s. 
+                            </br> </br>
+                            The system is comprised of 3 main softwares which communicate with each other.</div>
+                        <div class="large-12 columns">
+                        	<img src="../img/desc/systemDesc2.JPG"></br></br>
+                        </div>
+                        <div class="large-12 columns">
+                        	The Simbus program insures serial communication with the blinds, using configuration files which have the address of each blind programmed.</br></br></div>
+                        <div class="large-12 columns">
+                        	<img src="../img/desc/systemDesc3.JPG"></br></br>
+                        </div>
+                        <div class="large-12 columns">
+                        	The WMA server is a listener to signals from third party systems, like the
+commands from sensors and wall panels.</br></br></div>
+                        <div class="large-12 columns">
+                        	<img src="../img/desc/systemDesc4.JPG"></br></br>
+                        </div>
+                        <div class="large-12 columns">
+                        	A KNX OPC protocol provides the bridge between the previous softwares.</br></br></div>
+                        <div class="large-12 columns">
+                        	<img src="../img/desc/systemDesc5.JPG"></br></br>
+                        </div>
+                        <div class="large-12 columns">
+                        	All the programs are set up to initiale automatically at the start of the system and
+they need to be running at all times for a correct function of the system.</br></br></div>
+                    </div>
+                     <div class="row">
+                    	<div class="large-12 columns"></br></br>
+						<h3>OPERATION</h3>
+                        </div>
+                        <div class="large-12 columns">
+                        	The blinds can be operated through the Persienner App or the wall panels, which are of two types: AMX Panels and Triton Panels. The way these operate the blinds is different, and described below.</div>
+                       <div class="large-12 columns"></br></br>
+						<h4>AMX Panels</h4>
+                        </div>
+                        <div class="row">
+                            <div class="large-2 columns">
+                               <img src="../img/desc/systemDesc6.JPG"></div>
+                            <div class="large-6 columns">
+                                TThe AMX Touchscreen panel has two buttons which have 3 functions. Once pressed the left button will change function. All buttons are disabled while the blinds are moving.</div>
+                            <div class="large-4 columns">
+                                <img src="../img/desc/systemDesc7.JPG"></div>
+                         </div></br></br>
+                         <h4>Triton Panels</h4>
+                        </div>
+                        <div class="row">
+                            <div class="large-2 columns">
+                               <img src="../img/desc/systemDesc8.JPG"></div>
+                            <div class="large-6 columns">
+                                The blinds can be operated through conventional button press panels, Triton Panels. The way these operate the blinds is different depending on rooms where blinds can lift or not.</div>
+                            <div class="large-4 columns">
+                                <img src="../img/desc/systemDesc9.JPG"></div>
+                         </div></br></br>
+                     </div>
+                </div>
+                
+                <div id="appDescription" class="row">
+                     <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg1.jpg">
+                	</div>
+                    <div style="height:50px;" class="large-12 columns">
+                	</div>
+                    <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg2.jpg">
+                	</div>
+                     <div style="height:50px;" class="large-12 columns">
+                	</div>
+                    <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg3.jpg">
+                	</div>
+                     <div style="height:50px;" class="large-12 columns">
+                	</div>
+                    <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg4.jpg">
+                	</div>
+                     <div style="height:50px;" class="large-12 columns">
+                	</div>
+                    <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg5.jpg">
+                	</div>
+                     <div style="height:50px;" class="large-12 columns">
+                	</div>
+                    <div class="large-12 columns">
+                     	<img src="../img/Help/HelpImg6.jpg">
+                	</div>
+                </div>
+            
+   	</div>
+     <!-- for test site off
     <div class="row">
          <div class="large-6 columns">
     		<a href="../index.html" class="small alert button">Floors</a>
          </div>
     </div>
+    -->
+    
 	<script src="../js/cordova-2.0.0.js"></script>
     <script src="../js/GuideScript.js"></script>
 </body>
