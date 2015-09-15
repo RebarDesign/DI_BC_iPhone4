@@ -444,7 +444,7 @@ function init() {
 			/////////////////	
 			
 			var A0001Data = new Array(
-			/*R Nb[0]:*/ "A0001X",/*Name[1]:*/"DR Studio",/*Nb of Bl[2]:*/ 10,/* X[3]:*/ -480 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 11 ,/*1st Bl[6]*/ 1);
+			/*R Nb[0]:*/ "A0001",/*Name[1]:*/"DR Studio",/*Nb of Bl[2]:*/ 10,/* X[3]:*/ -480 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 11 ,/*1st Bl[6]*/ 1);
 				
 					createBlind ( 'blind01', '1' , A0001Data[3] , A0001Data[4] , A0001Data[0]);
 					createBlind ( 'blind02', '2' , A0001Data[3] + A0001Data[5] , A0001Data[4] , A0001Data[0]);
@@ -465,7 +465,7 @@ function init() {
 			/////////////////	
 			
 			var A0013Data = new Array(
-			/*R[0]:*/ "A1013",/*Name[1]:*/"Certifikat",/*Nb of Bl[2]:*/ 4,/* X[3]:*/ -353 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 9 ,/*1st Bl[6]*/ 11);
+			/*R[0]:*/ "A0013",/*Name[1]:*/"Certifikat",/*Nb of Bl[2]:*/ 4,/* X[3]:*/ -353 ,/*Y[4]:*/ 230 ,/*Bl Dr[5]:*/ 9 ,/*1st Bl[6]*/ 11);
 				
 					createBlind ( 'blind11', '11' , A0013Data[3] , A0013Data[4] , A0013Data[0]);
 					createBlind ( 'blind12', '12' , A0013Data[3] + A0013Data[5] , A0013Data[4] , A0013Data[0]);
